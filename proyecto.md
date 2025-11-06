@@ -86,8 +86,7 @@ lib/
 ├── services/
 │   └── api_service.dart     # Controlador - Lógica de negocio y API
 └── pages/
-    ├── welcome_page.dart    # Vista - Pantalla de bienvenida
-    ├── home_page.dart       # Vista - Lista de usuarios
+    ├── home_page.dart       # Vista - Lista de usuarios (página principal)
     ├── user_detail_page.dart # Vista - Detalle de usuario
     └── user_form_page.dart   # Vista - Formulario crear/editar
 ```
@@ -101,12 +100,7 @@ lib/
 
 ## ⚡ **Funcionalidades Implementadas**
 
-### **1. Pantalla de Bienvenida**
-- Pantalla básica de bienvenida
-- Botón para acceder a gestión de usuarios
-- Transición simple a la página principal
-
-### **2. Gestión de Usuarios (CRUD)**
+### **1. Gestión de Usuarios (CRUD)**
 
 #### **CREATE - Crear Usuario**
 - Formulario básico para crear usuarios
@@ -131,7 +125,7 @@ lib/
 - Manejo diferenciado: usuarios API vs locales
 - Sistema de marcado para usuarios eliminados de API
 
-### **3. Funcionalidades Adicionales**
+### **2. Funcionalidades Adicionales**
 - **Usuarios Fake:** Botón para generar 5 usuarios de prueba automáticamente
 - **Detalles de Usuario:** Vista básica con información completa del usuario
 - **Estados de Carga:** Indicadores durante la carga de datos
@@ -145,7 +139,7 @@ lib/
 ### **Archivo Principal - main.dart**
 ```dart
 import 'package:flutter/material.dart';
-import 'pages/welcome_page.dart';
+import 'pages/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -163,7 +157,7 @@ class MyApp extends StatelessWidget {
         colorSchemeSeed: Colors.blue,
         appBarTheme: const AppBarTheme(centerTitle: true),
       ),
-      home: const WelcomePage(),
+      home: const HomePage(),
       debugShowCheckedModeBanner: false,
     );
   }
@@ -484,24 +478,19 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
 ## 📸 **Capturas de Pantalla**
 
-### **1. Pantalla de Bienvenida**
-- Pantalla inicial con botón "USUARIOS"
-- Diseño simple y funcional
-- Acceso directo a la gestión de usuarios
-
-### **2. Lista de Usuarios**
+### **1. Lista de Usuarios**
 - Muestra usuarios de la API JSONPlaceholder
 - Cards básicas con información principal
 - Botones para crear usuarios y usuarios fake
 - Menú contextual para cada usuario
 
-### **3. Formulario de Usuario**
+### **2. Formulario de Usuario**
 - Campos organizados por secciones
 - Validación de campos obligatorios
 - Modo crear y editar
 - Interfaz limpia y funcional
 
-### **4. Detalle de Usuario**
+### **3. Detalle de Usuario**
 - Información completa del usuario
 - Datos organizados en secciones
 - Vista de solo lectura
@@ -581,14 +570,13 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 - **main.dart:** Configuración de la aplicación
 - **user.dart:** Modelos de datos (User, Address, Company)
 - **api_service.dart:** Lógica de negocio y API
-- **welcome_page.dart:** Pantalla de bienvenida
-- **home_page.dart:** Lista de usuarios
+- **home_page.dart:** Lista de usuarios (página principal)
 - **user_form_page.dart:** Formulario crear/editar
 - **user_detail_page.dart:** Detalle de usuario
 
 ### **Funcionalidades**
 - ✅ 4 operaciones CRUD básicas implementadas
-- ✅ 4 pantallas principales (Bienvenida, Lista, Detalle, Formulario)
+- ✅ 3 pantallas principales (Lista, Detalle, Formulario)
 - ✅ Validaciones básicas de formulario
 - ✅ 2 tipos de usuarios (API y Local)
 - ✅ Sistema híbrido de gestión de datos

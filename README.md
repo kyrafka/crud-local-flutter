@@ -25,30 +25,34 @@ lib/
 ├── services/
 │   └── api_service.dart     # Servicio HTTP para API REST
 └── pages/
-    ├── home_page.dart       # Lista de usuarios
+    ├── home_page.dart       # Lista de usuarios (página principal)
     ├── user_detail_page.dart # Detalle de usuario
     └── user_form_page.dart   # Formulario crear/editar
 ```
 
 ## Funcionalidades
 
-### 1. Lista de Usuarios (HomePage)
-- Muestra todos los usuarios en cards con información básica
-- Pull-to-refresh para actualizar datos
+### 1. Lista de Usuarios (HomePage) - Página Principal
+- Muestra todos los usuarios desde la API JSONPlaceholder
+- Cards con información básica: nombre, username, email
 - Menú contextual con opciones: Ver, Editar, Eliminar
-- Botón flotante para agregar nuevo usuario
+- Botones superiores para crear usuario individual y usuarios fake
+- Indicadores visuales para usuarios locales vs API
 
 ### 2. Detalle de Usuario (UserDetailPage)
-- Información completa organizada en secciones:
-  - Información Personal (nombre, email, teléfono, etc.)
-  - Dirección completa
-  - Información de la empresa
+- Información completa organizada en secciones con cards:
+  - Información Personal (nombre, email, teléfono, sitio web)
+  - Dirección completa (calle, suite, ciudad, código postal)
+  - Información de la empresa (nombre, eslogan, tipo de negocio)
+- Avatar con Hero animation
+- Diseño limpio y organizado
 
 ### 3. Formulario de Usuario (UserFormPage)
-- Formulario completo con validaciones
-- Modo crear y editar
-- Campos organizados en secciones con cards
-- Validación de campos requeridos
+- Formulario completo para crear y editar usuarios
+- Campos organizados en 3 secciones: Personal, Dirección, Empresa
+- Validaciones: nombre, username y email son obligatorios
+- Modo crear (usuarios locales) y editar (usuarios existentes)
+- Detección inteligente de cambios para evitar duplicados
 
 ### 4. Servicio API (ApiService)
 - `fetchUsers()`: Obtiene lista de usuarios

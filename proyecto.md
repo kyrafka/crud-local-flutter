@@ -4,8 +4,7 @@
 ---
 
 ### 👨‍💻 **Información del Proyecto**
-- **Autor:** Diego
-- **Curso:** Clase Final DAM
+- **Autor:** Jose Zuñiga
 - **Fecha:** Noviembre 2024
 - **Framework:** Flutter 3.x
 - **Lenguaje:** Dart
